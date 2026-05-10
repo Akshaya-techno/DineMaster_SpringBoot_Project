@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 
 import com.example.dinemaster.model.*;
-import com.example.dinemaste.service.ChefJpaService;
+import com.example.dinemaster.service.ChefJpaService;
 
 import java.util.List;
 

@@ -26,7 +26,7 @@ public class Restaurant {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "cuisineType")
+    @Column(name = "cuisinetype")
     private String cuisineType;
 
     @Column(name = "rating")

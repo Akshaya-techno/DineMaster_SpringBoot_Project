@@ -20,20 +20,20 @@ public class Chef {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "firstName")
+    @Column(name = "firstname")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "lastname")
     private String lastName;
 
     @Column(name = "expertise")
     private String expertise;
 
-    @Column(name = "experienceYears")
+    @Column(name = "experienceyears")
     private int experienceYears;
 
     @ManyToOne
-    @JoinColumn(name = "restaurantId")
+    @JoinColumn(name = "restaurantid")
     private Restaurant restaurant;
 
     public Chef() {

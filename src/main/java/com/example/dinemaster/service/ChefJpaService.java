@@ -88,14 +88,12 @@ public class ChefJpaService implements ChefRepository {
         chefJpaRepository.delete(chef);
     }
 
-    @Override
+
     public Restaurant getChefRestaurant(int chefId) {
-        Chef chef = getChefById(chefId);
-        return chef.getRestaurant();
+    Chef chef = chefJpaRepository.findById(chefId)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    Restaurant restaurant = chef.getRestaurant();
+    return restaurant;
     }
 
-    private Restaurant getRestaurantById(int restaurantId) {
-        return restaurantJpaRepository.findById(restaurantId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-    }
 }
